@@ -9,4 +9,4 @@ relationships and to assessing their significance, while MICe is used to rank
 the subset of significant associations on the bases of their strength.
 
 .. image:: docs/images/schema.png
-   :width: 400pt
+   :width: 200pt
