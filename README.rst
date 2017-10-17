@@ -1,14 +1,4 @@
 MICTools
 ========
 
-TODO
-
-Install
--------
-
-TODO
-
-Usage
------
-
-TODO
+.. include:: docs/index.rst
