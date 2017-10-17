@@ -1,0 +1,7 @@
+*.pyc
+*~
+.DS_Store
+build/
+dist/
+MANIFEST
+mictools.egg-info
