@@ -9,7 +9,7 @@ relationships assessing their significance, while MICe is used to rank
 the subset of significant associations on the bases of their strength.
 
 .. image:: docs/images/schema.png
-    :width: 200pt
+    :align: center
 
 The procedure can be broken into 4 steps (see Figure): i) Given variables pairs
 and  measured in  samples, the empirical TIC_e null distribution is estimated by 
