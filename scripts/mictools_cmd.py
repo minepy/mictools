@@ -233,7 +233,8 @@ def adjust(pval, output, method):
 @click.option('-c', '--clumps', type=click.INT, default=5,
               show_default=True, help="MICe c parameter.")
 def strength(xvars, pval, output, labels, target, yvars, thr, alpha, clumps):
-    """Compute the strength (MICe) on the variable pairs called significant.
+    """Compute the strength (MICe) on the variable pairs called significant at
+    the significance threshold THR (parameter -p/--thr).
     
     XVARS is a tab-delimited data file. The file must contain the variables by
     rows and the samples by columns (M x N columns). The first column
@@ -245,8 +246,8 @@ def strength(xvars, pval, output, labels, target, yvars, thr, alpha, clumps):
     total of M x K variable pairs.
 
     If sample classes are provided (see -l/--labels and -t/--target), the
-    analysis will be performed within each class independently. Otherwise, a
-    single class will be named None.   
+    analysis will be performed within each class independently. In this case,
+    the relationships called significant in at least one class are evaluated.
 
     The OUTPUT file contains MICe, the Pearson and the Spearman's rank 
     correlation coefficients and the TICe p values in each class.
