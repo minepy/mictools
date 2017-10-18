@@ -12,13 +12,13 @@ Homepage: https://github.com/minepy/mictools.
 
 1. Download the latest version:
 
-   `docker pull compmetagen/mictools`
+   `docker pull minepy/mictools`
 
 2. Run an instance of the image, mounting the host working directory
    (e.g. ``/Users/davide/mictools``) on to the container working directory
    ``/mictools``:
 
-   `docker run --rm -t -i -v /Users/davide/mictools:/mictools -w /mictools compmetagen/mictools /bin/bash`
+   `docker run --rm -t -i -v /Users/davide/mictools:/mictools -w /mictools minepy/mictools /bin/bash`
 
    You need to write something like ``-v //c/Users/davide/mictools:/mictools`` if
    you are in Windows or ``-v /home/davide/mictools:/mictools`` in Linux. The
