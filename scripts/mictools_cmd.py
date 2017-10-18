@@ -73,6 +73,7 @@ def null(xvars, output, labels, target, yvars, rowwise, nperm, seed, grid,
          clumps):
     """Compute the TICe null distribution.
 
+    \b
     XVARS is a tab-delimited data file. The file must contain the variables by
     rows and the samples by columns (M x N columns). The first column
     must contain the variable IDs and the first row the sample IDs. By default,
@@ -107,9 +108,9 @@ def null(xvars, output, labels, target, yvars, rowwise, nperm, seed, grid,
 def mergenull(null, output):
     """Merge multiple TICe null distributions.
 
-    null is the input null distribution(s) and output is the output null
+    \b
+    NULL is the input null distribution(s) and output is the output null
     distribution.
-
 
     Example:
 
@@ -141,6 +142,7 @@ def mergenull(null, output):
 def pval(xvars, null, output, labels, target, yvars, rowwise, grid, clumps):
     """Compute TICe p-values.
 
+    \b
     XVARS is a tab-delimited data file. The file must contain the variables by
     rows and the samples by columns (M x N columns). The first column
     must contain the variable IDs and the first row the sample IDs. By default,
@@ -155,7 +157,7 @@ def pval(xvars, null, output, labels, target, yvars, rowwise, grid, clumps):
 
     If sample classes are provided (see -l/--labels and -t/--target), the
     analysis will be performed within each class independently. Otherwise, a
-    single class will be named None.   
+    single class will be named None.
 
     The command returns in the OUTPUT directory the following files:
 
@@ -186,6 +188,7 @@ def pval(xvars, null, output, labels, target, yvars, rowwise, grid, clumps):
 def adjust(pval, output, method):
     """Multiple testing correction.
     
+    \b
     PVAL is the input file containing the uncorrected p values (see the 
     pval subcommand). The command returns in the OUTPUT directory the following 
     files: 
@@ -233,7 +236,10 @@ def adjust(pval, output, method):
 @click.option('-c', '--clumps', type=click.INT, default=5,
               show_default=True, help="MICe c parameter.")
 def strength(xvars, pval, output, labels, target, yvars, thr, alpha, clumps):
-    """Compute the strength (MICe) on the variable pairs called significant at
+    """Compute the strength (MICe).
+    
+    \b
+    Compute the strength (MICe) on the variable pairs called significant at
     the significance threshold THR (parameter -p/--thr).
     
     XVARS is a tab-delimited data file. The file must contain the variables by
