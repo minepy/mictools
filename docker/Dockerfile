@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     python-numpy \
     python-scipy \
-    python-matplotlib
+    python-matplotlib \
     git \
   && pip install --upgrade pip \
   && pip install 'setuptools >=14.0' \
