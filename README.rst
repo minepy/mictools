@@ -1,6 +1,9 @@
 MICtools
 ========
 
+.. image:: https://travis-ci.org/minepy/mictools.svg?branch=master
+    :target: https://travis-ci.org/minepy/mictools
+
 MICtools is an open source pipeline which combines the TIC_e and MIC_e measures
 [Reshef2016]_ into a two-step procedure that allows to identify relationships of
 various degrees of complexity in large datasets. TIC_e is used to perform 
@@ -39,7 +42,7 @@ MICtools can handle different types of experiments:
 * moreover, for each experiments listed above, if the sample classes are 
   provided (see -l/--labels and -t/--target), the analysis will be performed 
   within each class independently.
-  
+
 
 
 
