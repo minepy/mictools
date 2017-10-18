@@ -1,3 +1,3 @@
-__version__ = "1.5.0.dev"
+__version__ = "1.0"
 
 NULL_HIST_RES = 10000
