@@ -73,7 +73,6 @@ def null(xvars, output, labels, target, yvars, rowwise, nperm, seed, grid,
          clumps):
     """Compute the TICe null distribution.
 
-    \b
     XVARS is a tab-delimited data file. The file must contain the variables by
     rows and the samples by columns (M x N columns). The first column
     must contain the variable IDs and the first row the sample IDs. By default,
@@ -108,7 +107,6 @@ def null(xvars, output, labels, target, yvars, rowwise, nperm, seed, grid,
 def mergenull(null, output):
     """Merge multiple TICe null distributions.
 
-    \b
     NULL is the input null distribution(s) and output is the output null
     distribution.
 
@@ -142,7 +140,6 @@ def mergenull(null, output):
 def pval(xvars, null, output, labels, target, yvars, rowwise, grid, clumps):
     """Compute TICe p-values.
 
-    \b
     XVARS is a tab-delimited data file. The file must contain the variables by
     rows and the samples by columns (M x N columns). The first column
     must contain the variable IDs and the first row the sample IDs. By default,
@@ -160,13 +157,14 @@ def pval(xvars, null, output, labels, target, yvars, rowwise, grid, clumps):
     single class will be named None.
 
     The command returns in the OUTPUT directory the following files:
-
-        - obs_dist.txt: the observed TICe distribution for each class;
-        - obs.txt: the observed TICe values for each variable pair tested in 
-                   each class;
-        - pval.txt: empirical p values for each variable pair tested in 
-                    each class;
-        - pval_CLASS.png: the p values distribution for each class.
+        
+    \b
+    - obs_dist.txt: the observed TICe distribution for each class;
+    - obs.txt: the observed TICe values for each variable pair tested in 
+               each class;
+    - pval.txt: empirical p values for each variable pair tested in 
+                each class;
+    - pval_CLASS.png: the p values distribution for each class.
 
     Example:
 
@@ -187,31 +185,32 @@ def pval(xvars, null, output, labels, target, yvars, rowwise, grid, clumps):
 @click.option('-m', '--method', default='qvalue', help='correction method.')
 def adjust(pval, output, method):
     """Multiple testing correction.
-    
-    \b
+
     PVAL is the input file containing the uncorrected p values (see the 
     pval subcommand). The command returns in the OUTPUT directory the following 
     files: 
 
-        - pval_adj.txt: adjusted p values for each variable pair tested in 
-                        each class.
-        - pi0_CLASS.png: if the method (-m/--method) is the qvalue, command will
-                         return the estimated pi_0 versus the tuning parameter
-                         lambda for each class. 
+    \b
+    - pval_adj.txt: adjusted p values for each variable pair tested in 
+                    each class.
+    - pi0_CLASS.png: if the method (-m/--method) is the qvalue, command will
+                     return the estimated pi_0 versus the tuning parameter
+                     lambda for each class. 
 
     The available methods are:
 
-        bonferroni: one-step correction
-        sidak: one-step correction
-        holm-sidak: step down method using Sidak adjustments
-        holm: step-down method using Bonferroni adjustments
-        simes-hochberg: step-up method  (independent)
-        hommel: closed method based on Simes tests (non-negative)
-        fdr_bh: Benjamini/Hochberg  (non-negative)
-        fdr_by: Benjamini/Yekutieli (negative)
-        fdr_tsbh: two stage fdr correction (non-negative)
-        fdr_tsbky: two stage fdr correction (non-negative)
-        qvalue: Storey's q value (smoother method)
+    \b
+    - bonferroni: one-step correction
+    - sidak: one-step correction
+    - holm-sidak: step down method using Sidak adjustments
+    - holm: step-down method using Bonferroni adjustments
+    - simes-hochberg: step-up method  (independent)
+    - hommel: closed method based on Simes tests (non-negative)
+    - fdr_bh: Benjamini/Hochberg  (non-negative)
+    - fdr_by: Benjamini/Yekutieli (negative)
+    - fdr_tsbh: two stage fdr correction (non-negative)
+    - fdr_tsbky: two stage fdr correction (non-negative)
+    - qvalue: Storey's q value (smoother method)
 
     Example:
 
@@ -238,7 +237,6 @@ def adjust(pval, output, method):
 def strength(xvars, pval, output, labels, target, yvars, thr, alpha, clumps):
     """Compute the strength (MICe).
     
-    \b
     Compute the strength (MICe) on the variable pairs called significant at
     the significance threshold THR (parameter -p/--thr).
     
