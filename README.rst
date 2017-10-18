@@ -18,3 +18,17 @@ computed for all variable pairs; iii) p-values are corrected for multiplicity in
 order to control the family-wise error rate (FWER) or the FDR; iv) finally, the
 strengths of the relationships called significant are estimated using the MICe
 estimator.
+
+
+
+
+
+
+
+
+
+
+.. [Reshef2016] Yakir A. Reshef, David N. Reshef, Hilary K. Finucane and 
+                Pardis C. Sabeti and Michael Mitzenmacher. Measuring Dependence
+                Powerfully and Equitably. Journal of Machine Learning Research, 
+                2016.
