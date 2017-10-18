@@ -10,3 +10,11 @@ the subset of significant associations on the bases of their strength.
 
 .. image:: docs/images/schema.png
     :width: 200pt
+
+The procedure can be broken into 4 steps (see Figure): i) Given variables pairs
+and  measured in  samples, the empirical TIC_e null distribution is estimated by 
+permutation; ii) TIC_e statistics and the associated empirical p-values are
+computed for all variable pairs; iii) p-values are corrected for multiplicity in
+order to control the family-wise error rate (FWER) or the FDR; iv) finally, the
+strengths of the relationships called significant are estimated using the MICe
+estimator.
