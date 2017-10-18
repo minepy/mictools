@@ -15,14 +15,26 @@ the subset of significant associations on the bases of their strength.
 
 The MICtools pipeline can be broken into 4 steps (see the figure above):
 
-#. given variables pairs and  measured in samples, the empirical TIC_e null 
-   distribution is estimated by permutation;
+#. given M variables pairs x_i and y_i measured in n samples, the empirical
+   TIC_e null distribution is estimated by permutation;
 #. TIC_e statistics and the associated empirical p-values are computed for all 
    variable pairs;
 #. p-values are corrected for multiplicity in order to control the family-wise
    error rate (FWER) or the false discovery rate (FDR);
 #. finally, the strengths of the relationships called significant are estimated 
    using the MIC_e estimator.
+
+Install
+-------
+
+From source
+^^^^^^^^^^^
+
+Using pip
+^^^^^^^^^
+
+Docker
+^^^^^^
 
 Usage
 -----
@@ -42,6 +54,20 @@ MICtools can handle different types of experiments:
 * moreover, for each experiments listed above, if the sample classes are 
   provided (see -l/--labels and -t/--target), the analysis will be performed 
   within each class independently.
+
+MICtools is implemented as a single command (``mictools'') with the following
+subcommands:
+
+* ``null'': Compute the TIC_e null distribution.
+* ``mergenull'': Merge multiple TIC_e null distributions.
+* ``pval'': Compute TIC_e p-values.
+* ``adjust'': Multiple testing correction.
+* ``strength'': Compute the strength (MIC_e)
+
+Tutorials
+^^^^^^^^^
+
+
 
 
 
