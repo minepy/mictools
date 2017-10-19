@@ -62,7 +62,7 @@ subcommands:
 * ``mergenull'': Merge multiple TIC_e null distributions.
 * ``pval'': Compute TIC_e p-values.
 * ``adjust'': Multiple testing correction.
-* ``strength'': Compute the strength (MIC_e)
+* ``strength'': Compute the strength (MIC_e).
 
 Tutorials
 ^^^^^^^^^

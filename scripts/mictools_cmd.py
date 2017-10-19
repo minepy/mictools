@@ -58,7 +58,7 @@ def cli():
 @click.option('-l', '--labels', type=click.Path(exists=True), help=labels_help)
 @click.option('-t', '--target', type=click.STRING, help=target_help)
 @click.option('-y', '--yvars', type=click.Path(exists=True), help=yvars_help)
-@click.option('-n', '--rowwise', is_flag=True, help=rowwise_help)
+@click.option('-r', '--rowwise', is_flag=True, help=rowwise_help)
 @click.option('-p', '--nperm', type=click.INT, default=200000,
               show_default=True, help='number of permutations.')
 @click.option('-s', '--seed', type=click.INT, default=0,
@@ -80,7 +80,7 @@ def null(xvars, output, labels, target, yvars, rowwise, nperm, seed, grid,
     
     If YVARS (K x N) is provided, the analysis will be performed between all 
     variables of the dataset XVARS and of those of the dataset YVARS, for a
-    total of M x K variable pairs. When the option -n/--rowwise is set, only the
+    total of M x K variable pairs. When the option -r/--rowwise is set, only the
     pairs XVARS_i and YVARS_i for each i are tested.
 
     If sample classes are provided (see -l/--labels and -t/--target), the
@@ -129,7 +129,7 @@ def mergenull(null, output):
 @click.option('-l', '--labels', type=click.Path(exists=True), help=labels_help)
 @click.option('-t', '--target', type=click.STRING, help=target_help)
 @click.option('-y', '--yvars', type=click.Path(exists=True), help=yvars_help)
-@click.option('-n', '--rowwise', is_flag=True, help=rowwise_help)
+@click.option('-r', '--rowwise', is_flag=True, help=rowwise_help)
 @click.option('-b', '--grid', type=click.INT, default=9,
               show_default=True, help='TICe maximum grid size B(n). Set to 4 '
               'or 6 for less complex alternative hypotheses and to 12 or more '
@@ -149,7 +149,7 @@ def pval(xvars, null, output, labels, target, yvars, rowwise, grid, clumps):
     
     If YVARS (K x N) is provided, the analysis will be performed between all 
     variables of the dataset XVARS and of those of the dataset YVARS, for a
-    total of M x K variable pairs. When the option -n/--rowwise is set, only the
+    total of M x K variable pairs. When the option -r/--rowwise is set, only the
     pairs XVARS_i and YVARS_i for each i are tested.
 
     If sample classes are provided (see -l/--labels and -t/--target), the
