@@ -27,30 +27,64 @@ The MICtools pipeline can be broken into 4 steps (see the figure above):
 Install
 -------
 
-From source
-^^^^^^^^^^^
-
 Using pip
 ^^^^^^^^^
 
+.. code-block:: sh
+
+    sudo pip install mictools 
+
 Docker
 ^^^^^^
+
+#. Install Docker for `Linux <https://docs.docker.com/linux/>`_,
+   `Mac OS X <https://docs.docker.com/mac/>`_ or
+   `Windows <https://docs.docker.com/windows/>`_.
+
+#. Run the ``Docker Quickstart Terminal`` (Mac OS X, Windows) or the
+   ``docker`` daemon (Linux, ``sudo service docker start``).
+
+#. Follow the instructions at https://hub.docker.com/r/minepy/mictools/.
+
+From source
+^^^^^^^^^^^
+
+If you are installing from source, the following dependences must be installed:
+
+* Python >= 2.7
+* Click >= 5.1
+* numpy >= 1.7.0
+* scipy >= 0.13
+* pandas >= 0.17.0',
+* matplotlib >= 1.2.0,<2',
+* statsmodels >= 0.6.1
+* minepy >= 1.2
+
+We suggest to install these dependences using the OS package manager (Linux), 
+Homebrew (macOS/OS X) or pip.
+
+Download the latest stable version from https://github.com/minepy/mictools/releases
+and complete the installation:
+
+.. code-block:: sh
+
+   tar -zxvf mictools-X.Y.Z.tar.gz
+   sudo python setup.py install
 
 Usage
 -----
 
 MICtools can handle different types of experiments:
 
-* given a single dataset X, it evaluates all the pairwise relationships, i.e.
-  if your dataset is composed by M variables and N samples, MICtools will test
-  M+(M-1)/2 associations;
-* given two datasets, X (MxN) and Y (KxN) (parameter -y/--yvars) it evaluates 
-  all the pairwise relationships between the variables of the two datasets
-  (for a total of MxK associations). Note that the number samples (N) in the 
-  datasets X and Y must be the same.
+* given a single dataset X, with M variables and N samples, MICtools evaluates
+  the M+(M-1)/2 possible associations;
+* given two datasets, X (MxN) and Y (KxN) (parameter -y/--yvars) MICtools 
+  evaluates all the pairwise relationships between the variables of the two
+  datasets (for a total of MxK associations). Note that the number samples (N)
+  in the datasets X and Y must be the same.
 * given two datasets, X (MxN) and Y (KxN) it evaluates all the rowwise 
-  relationships, i.e. only the variables pairs X_i and Y_i (for each i in 
-  min(M, K)) will be tested;
+  relationships (see -r/--rowwise), i.e. only the variables pairs X_i and Y_i
+  (for each i in min(M, K)) will be tested;
 * moreover, for each experiments listed above, if the sample classes are 
   provided (see -l/--labels and -t/--target), the analysis will be performed 
   within each class independently.
@@ -58,11 +92,20 @@ MICtools can handle different types of experiments:
 MICtools is implemented as a single command (``mictools'') with the following
 subcommands:
 
-* ``null'': Compute the TIC_e null distribution.
-* ``mergenull'': Merge multiple TIC_e null distributions.
-* ``pval'': Compute TIC_e p-values.
-* ``adjust'': Multiple testing correction.
-* ``strength'': Compute the strength (MIC_e).
+``null``
+  Compute the TIC_e null distribution.
+
+``mergenull``
+  Merge multiple TIC_e null distributions.
+
+``pval``
+  Compute TIC_e p-values.
+
+``adjust``
+  Multiple testing correction.
+
+``strength``
+  Compute the strength (MIC_e).
 
 Tutorials
 ^^^^^^^^^
