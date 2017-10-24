@@ -1,5 +1,4 @@
 FROM debian:9
-MAINTAINER Davide Albanese <davide.albanese@gmail.com>
 
 RUN apt-get update && apt-get install -y \
     build-essential \
