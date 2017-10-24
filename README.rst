@@ -102,7 +102,15 @@ subcommands:
 Tutorials
 ^^^^^^^^^
 
+cd datasets
+X=datasaurus.txt
+ODIR=output
+mkdir $ODIR
 
+mictools null $X $ODIR/null_dist.txt
+mictools pval $X $ODIR/null_dist.txt $ODIR
+mictools adjust $ODIR/pval.txt $ODIR
+mictools strength $X $ODIR/pval_adj.txt $ODIR/strength.txt
 
 
 
