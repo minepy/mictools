@@ -32,7 +32,7 @@ Using pip
 
 .. code-block:: sh
 
-    sudo pip install mictools 
+    pip install mictools 
 
 Docker
 ^^^^^^
@@ -50,18 +50,10 @@ From source
 ^^^^^^^^^^^
 
 If you are installing from source, the following dependences must be installed:
-
-* Python >= 2.7
-* Click >= 5.1
-* numpy >= 1.7.0
-* scipy >= 0.13
-* pandas >= 0.17.0',
-* matplotlib >= 1.2.0,<2',
-* statsmodels >= 0.6.1
-* minepy >= 1.2
-
-We suggest to install these dependences using the OS package manager (Linux), 
-Homebrew (macOS/OS X) or pip.
+Python >= 2.7, Click >= 5.1, numpy >= 1.7.0, scipy >= 0.13, pandas >= 0.17.0,
+matplotlib >= 1.2.0,<2, statsmodels >= 0.6.1, minepy >= 1.2. We suggest to
+install these dependences using the OS package manager (Linux), Homebrew 
+(macOS/OS X) or pip.
 
 Download the latest stable version from https://github.com/minepy/mictools/releases
 and complete the installation:
@@ -69,7 +61,7 @@ and complete the installation:
 .. code-block:: sh
 
    tar -zxvf mictools-X.Y.Z.tar.gz
-   sudo python setup.py install
+   python setup.py install
 
 Usage
 -----
