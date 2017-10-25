@@ -136,10 +136,11 @@ default value):
 The output file ``null_dist.txt`` is a TAB-delimited file which contains the 
 null distrubution::
 
-  Class	BinStart	BinEnd	NullCount	NullCountCum
-  None	0.000000	0.000100	0	200000
-  None	0.000100	0.000200	0	200000
-  None	0.000200	0.000300	0	200000
+  Class BinStart BinEnd   NullCount NullCountCum
+  ===== ======== ======== ========= ============
+  None  0.000000 0.000100 0         200000
+  None  0.000100 0.000200 0         200000
+  None  0.000200 0.000300 0         200000
   ...
 
 The first column (``Class``) contains the class membership (in this particular 
@@ -209,7 +210,7 @@ The command returns in the OUTPUT directory the following files:
 Strength of significant associations
 """"""""""""""""""""""""""""""""""""
 Finally, the strengths of the relationships called significant are estimated 
-using the MIC_e estimator. By default the significance level is set to 0.05:
+using MIC_e. By default the significance level is set to 0.05:
 
 .. code-block:: sh
 
@@ -218,8 +219,8 @@ using the MIC_e estimator. By default the significance level is set to 0.05:
 
 The output file ``strength.txt`` is a TAB-delimited file, containing for each 
 significant association the (corrected) TIC_e p-values, the Pearson's
-correlation, the Spearman's coefficient and finally the strength, *i.e.* the
-MIC_e::
+correlations, the Spearman's coefficients and finally the strengths, *i.e.* the
+MIC_e values::
 
   Class	Var1	Var2	TICePVal	PearsonR	SpearmanRho	MICe
   None	bullseye_x	bullseye_y	3.833704e-02	-0.068586	-0.078734	0.424553
