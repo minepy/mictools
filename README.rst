@@ -166,22 +166,19 @@ The command will return in the output directory the following:
   
 ``obs.txt``
   TAB-delimited file containing the observed TICe values for each variable pair
-  tested::
+  tested:
 
-    Var1	Var2	None
-    away_x	bullseye_x	0.029476
-    away_x	circle_x	0.018211
-    away_x	dino_x	0.050720
-    ...
+  ====   ========== ========
+  Var1   Var2       None
+  ====   ========== ========
+  away_x bullseye_x	0.029476
+  away_x circle_x   0.018211
+  away_x dino_x     0.050720
+  ...    ...        ...
+  ====   ========== ========
 
 ``pval.txt``
-  TAB-delimited file containing the empirical p-values for each variable pair::
-
-    Var1	Var2	None
-    away_x	bullseye_x	5.196545e-01
-    away_x	circle_x	9.550614e-01
-    away_x	dino_x	4.437794e-02
-    ...
+  TAB-delimited file containing the empirical p-values for each variable pair
 
 ``pval_None.png``
   the p values distribution plot:
@@ -224,13 +221,16 @@ significant association the (corrected) TIC_e p-values, the Pearson's
 correlations, the Spearman's coefficients and finally the strengths, *i.e.* the
 MIC_e values::
 
-  Class	Var1	Var2	TICePVal	PearsonR	SpearmanRho	MICe
-  None	bullseye_x	bullseye_y	3.833704e-02	-0.068586	-0.078734	0.424553
-  None	circle_x	circle_y	4.723013e-04	-0.068343	-0.077292	0.631458
-  None	dots_x	dots_y	1.983666e-02	-0.060342	-0.126174	0.500185
-  None	slant_up_x	slant_up_y	1.593666e-02	-0.068609	-0.086098	0.355019
-  None	star_x	star_y	4.723013e-04	-0.062961	-0.051445	0.633117
-  None	x_shape_x	x_shape_y	4.723013e-04	-0.065583	-0.020535	0.566703
+===== ========== ========== ============ ========= =========== ========
+Class Var1	     Var2	      TICePVal     PearsonR  SpearmanRho MICe
+===== ========== ========== ============ ========= =========== ========
+None  bullseye_x bullseye_y 3.833704e-02 -0.068586 -0.078734   0.424553
+None  circle_x   circle_y   4.723013e-04 -0.068343 -0.077292   0.631458
+None  dots_x     dots_y     1.983666e-02 -0.060342 -0.126174   0.500185
+None  slant_up_x slant_up_y	1.593666e-02 -0.068609 -0.086098   0.355019
+None  star_x     star_y     4.723013e-04 -0.062961 -0.051445   0.633117
+None  x_shape_x  x_shape_y  4.723013e-04 -0.065583 -0.020535   0.566703
+===== ========== ========== ============ ========= =========== ========
 
 
 
