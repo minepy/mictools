@@ -219,7 +219,7 @@ using MIC_e. By default the significance level is set to 0.05:
 The output file ``strength.txt`` is a TAB-delimited file, containing for each 
 significant association the (corrected) TIC_e p-values, the Pearson's
 correlations, the Spearman's coefficients and finally the strengths, *i.e.* the
-MIC_e values::
+MIC_e values:
 
 ===== ========== ========== ============ ========= =========== ========
 Class Var1	     Var2	      TICePVal     PearsonR  SpearmanRho MICe
