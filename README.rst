@@ -101,10 +101,8 @@ scenarios:
 * two datasets, X (MxN) and Y (KxN): to evaluate all the rowwise 
   relationships (see -r/--rowwise), i.e. only the variables pairs X_i and Y_i
   (for each i in min(M, K)) will be tested;
-
-In all the abovementioned cases the analysis will be performed 
-  within each class independently if the sample classes are 
-  provided (see -l/--labels and -t/--target),
+In all the abovementioned cases the analysis will be performed  within each class independently if the sample classes are 
+  provided (see -l/--labels and -t/--target).
 
 MICtools is implemented as a single command (``mictools'') with the following
 subcommands:
