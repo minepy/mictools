@@ -153,7 +153,7 @@ variable pairs:
 The command will return in the output directory the following:
 
 ``obs_dist.txt``
-  the observed TICe distribution in the same format of ``null_dist.txt``;
+  the observed TICe distribution in the same format of ``null_dist.txt``
   
 ``obs.txt``
   the observed TICe values for each variable pair tested::
