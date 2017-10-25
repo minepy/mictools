@@ -162,7 +162,8 @@ The command will return in the output directory the following:
   the observed TICe distribution in the same format of ``null_dist.txt``
   
 ``obs.txt``
-  the observed TICe values for each variable pair tested::
+  TAB-delimited file containing the observed TICe values for each variable pair
+  tested::
 
     Var1	Var2	None
     away_x	bullseye_x	0.029476
@@ -171,7 +172,7 @@ The command will return in the output directory the following:
     ...
 
 ``pval.txt``
-  contains empirical p values for each variable pair::
+  TAB-delimited file containing the empirical p-values for each variable pair::
 
     Var1	Var2	None
     away_x	bullseye_x	5.196545e-01
@@ -201,20 +202,32 @@ The command returns in the OUTPUT directory the following files:
 
 ``pi0_None.png``
   since the correction method is the Storey's qvalue, the command returns
-  the estimated pi_0 versus the tuning parameter lambda:
+  a plot with the estimated pi_0 versus the tuning parameter lambda:
 
   .. image:: docs/images/pi0_None.png
 
+Strength of significant associations
+""""""""""""""""""""""""""""""""""""
+Finally, the strengths of the relationships called significant are estimated 
+using the MIC_e estimator. By default the significance level is set to 0.05:
 
-mictools strength $X $ODIR/pval_adj.txt $ODIR/strength.txt
+.. code-block:: sh
+
+  mictools strength $X $ODIR/pval_adj.txt $ODIR/strength.txt
 
 
+The output file ``strength.txt`` is a TAB-delimited file, containing for each 
+significant association the (corrected) TIC_e p-values, the Pearson's
+correlation, the Spearman's coefficient and finally the strength, *i.e.* the
+MIC_e::
 
-
-
-
-
-
+  Class	Var1	Var2	TICePVal	PearsonR	SpearmanRho	MICe
+  None	bullseye_x	bullseye_y	3.833704e-02	-0.068586	-0.078734	0.424553
+  None	circle_x	circle_y	4.723013e-04	-0.068343	-0.077292	0.631458
+  None	dots_x	dots_y	1.983666e-02	-0.060342	-0.126174	0.500185
+  None	slant_up_x	slant_up_y	1.593666e-02	-0.068609	-0.086098	0.355019
+  None	star_x	star_y	4.723013e-04	-0.062961	-0.051445	0.633117
+  None	x_shape_x	x_shape_y	4.723013e-04	-0.065583	-0.020535	0.566703
 
 
 
