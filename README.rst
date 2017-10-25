@@ -222,12 +222,12 @@ correlations, the Spearman's coefficients and finally the strengths, *i.e.* the
 MIC_e values:
 
 ===== ========== ========== ============ ========= =========== ========
-Class Var1	     Var2	      TICePVal     PearsonR  SpearmanRho MICe
+Class Var1       Var2       TICePVal     PearsonR  SpearmanRho MICe
 ===== ========== ========== ============ ========= =========== ========
 None  bullseye_x bullseye_y 3.833704e-02 -0.068586 -0.078734   0.424553
 None  circle_x   circle_y   4.723013e-04 -0.068343 -0.077292   0.631458
 None  dots_x     dots_y     1.983666e-02 -0.060342 -0.126174   0.500185
-None  slant_up_x slant_up_y	1.593666e-02 -0.068609 -0.086098   0.355019
+None  slant_up_x slant_up_y 1.593666e-02 -0.068609 -0.086098   0.355019
 None  star_x     star_y     4.723013e-04 -0.062961 -0.051445   0.633117
 None  x_shape_x  x_shape_y  4.723013e-04 -0.065583 -0.020535   0.566703
 ===== ========== ========== ============ ========= =========== ========
