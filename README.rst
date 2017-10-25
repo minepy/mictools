@@ -99,6 +99,8 @@ subcommands:
 ``strength``
   Compute the strength (MIC_e).
 
+Run ``mictools SUBCOMMAND --help`` for the documentation for each specific step.
+
 Tutorial
 ^^^^^^^^
 We analyze the datasaurus dataset https://www.autodeskresearch.com/publications/samestats
