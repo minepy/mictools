@@ -136,6 +136,17 @@ default value):
 The output file ``null_dist.txt`` is a TAB-delimited file which contains the 
 null distrubution::
 
+  =====  =====  ======
+   Inputs     Output
+  ------------  ------
+    A      B    A or B
+  =====  =====  ======
+  False  False  False
+  True   False  True
+  False  True   True
+  True   True   True
+  =====  =====  ======
+
   ===== ======== ======== ========= ============
   Class BinStart BinEnd   NullCount NullCountCum
   ===== ======== ======== ========= ============
