@@ -27,15 +27,33 @@ The MICtools pipeline can be broken into 4 steps (see the figure above):
 Install
 -------
 
-Using pip
-^^^^^^^^^
+Using pip (Linux and macOS/OS X)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We suggest to install the Python and the GCC compiler through the package manager 
+(In Mac OS X, we recommend to install them using `Homebrew <http://brew.sh/>`_)
+(e.g. on Ubuntu/Debian):
 
 .. code-block:: sh
 
-    pip install mictools 
+    sudo apt-get update
+    sudo apt-get install build-essential python-dev
 
-Docker
-^^^^^^
+Then, upgrade pip and install setuptools:
+
+.. code-block:: sh
+
+    pip install --upgrade pip
+    pip install 'setuptools >=14.0'
+
+Finally, install mictools:
+
+.. code-block:: sh
+
+    pip install mictools
+
+Docker (Linux, macOS/OS X and MS Windows)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Install Docker for `Linux <https://docs.docker.com/linux/>`_,
    `Mac OS X <https://docs.docker.com/mac/>`_ or
