@@ -134,7 +134,7 @@ default value):
   mictools null $X $ODIR/null_dist.txt
 
 The output file ``null_dist.txt`` is a TAB-delimited file which contains the 
-null distrubution::
+null distrubution:
 
 ===== ======== ======== ========= ============
 Class BinStart BinEnd   NullCount NullCountCum
