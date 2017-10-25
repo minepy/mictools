@@ -136,12 +136,14 @@ default value):
 The output file ``null_dist.txt`` is a TAB-delimited file which contains the 
 null distrubution::
 
+  ===== ======== ======== ========= ============
   Class BinStart BinEnd   NullCount NullCountCum
   ===== ======== ======== ========= ============
   None  0.000000 0.000100 0         200000
   None  0.000100 0.000200 0         200000
   None  0.000200 0.000300 0         200000
-  ...
+  ...   ...      ...      ...       ...
+  ===== ======== ======== ========= ============
 
 The first column (``Class``) contains the class membership (in this particular 
 case no sample classes were provided), ``BinStart`` and ``BinEnd`` define the
