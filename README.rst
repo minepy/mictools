@@ -99,17 +99,53 @@ subcommands:
 ``strength``
   Compute the strength (MIC_e).
 
-Tutorials
-^^^^^^^^^
+Tutorial
+^^^^^^^^
+We analyze the datasaurus dataset https://www.autodeskresearch.com/publications/samestats
+(DOI: 10.1145/3025453.3025912), composed by 13 relationships (for a total of 26
+variables) with the same summary statistics (e.g. the Pearson's correlation),
+while being very different in appearance. The dataset was modified in order to 
+destroy secondary associations. In this example we test all the possible 
+associations (26*(26-1)/2 = 325).
+
+Go to the ``examples`` folder:
 
 .. code-block:: sh
 
-  cd datasets
+  cd examples
+
+Select the Datasaurus dataset and the output folder:
+
+.. code-block:: sh
+
   X=datasaurus.txt
-  ODIR=output
+  ODIR=datasaurus_results
   mkdir $ODIR
 
+Compute the empirical TIC_e null distribution (with 200,000 permutations):
+
+.. code-block:: sh
+
   mictools null $X $ODIR/null_dist.txt
+
+The output file ``null_dist.txt`` is a TAB-delimited file which contains the 
+null distrubution::
+
+  Class	BinStart	BinEnd	NullCount	NullCountCum
+  None	0.000000	0.000100	0	200000
+  None	0.000100	0.000200	0	200000
+  None	0.000200	0.000300	0	200000
+
+The first column (``Class``) contains the class membership (in this particular 
+case no sample classes were provided), ``BinStart`` and ``BinEnd`` define the
+TIC_e range and ``NullCount`` and ``NullCountCum`` are distribution and the 
+cumulative distribution, respectively.
+
+TIC_e statistics and the associated empirical p-values are computed for all 
+variable pairs;
+
+
+
   mictools pval $X $ODIR/null_dist.txt $ODIR
   mictools adjust $ODIR/pval.txt $ODIR
   mictools strength $X $ODIR/pval_adj.txt $ODIR/strength.txt
