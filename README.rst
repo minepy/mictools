@@ -168,14 +168,14 @@ The command will return in the output directory the following:
   TAB-delimited file containing the observed TICe values for each variable pair
   tested:
 
-====   ========== ========
-Var1   Var2       None
-====   ========== ========
-away_x bullseye_x	0.029476
-away_x circle_x   0.018211
-away_x dino_x     0.050720
-...    ...        ...
-====   ========== ========
+  ====== ========== ========
+  Var1   Var2       None
+  ====== ========== ========
+  away_x bullseye_x	0.029476
+  away_x circle_x   0.018211
+  away_x dino_x     0.050720
+  ...    ...        ...
+  ====== ========== ========
 
 ``pval.txt``
   TAB-delimited file containing the empirical p-values for each variable pair
