@@ -24,6 +24,8 @@ The MICtools pipeline can be broken into 4 steps (see the figure above):
 #. finally, the strengths of the relationships called significant are estimated 
    using the MIC_e estimator.
 
+.. contents:: :local:
+
 Install
 -------
 
