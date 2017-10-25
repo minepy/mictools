@@ -117,7 +117,7 @@ subcommands:
 ``strength``
   Compute the strength (MIC_e).
 
-Run ``mictools SUBCOMMAND --help`` for the documentation for each specific step.
+Run ``mictools SUBCOMMAND --help`` for the documentation of each specific step.
 
 Tutorial
 ^^^^^^^^
