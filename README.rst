@@ -186,10 +186,27 @@ The command will return in the output directory the following:
 
 Multiple testing correction
 """""""""""""""""""""""""""
+Correct the p-values for multiplicity in order to control the false discovery
+rate (FDR, default method);
 
+.. code-block:: sh
 
   mictools adjust $ODIR/pval.txt $ODIR
-  mictools strength $X $ODIR/pval_adj.txt $ODIR/strength.txt
+
+The command returns in the OUTPUT directory the following files: 
+
+``pval_adj.txt`` 
+  adjusted p values for each variable pair tested, in the same format of 
+  ``pval.txt``
+
+``pi0_None.png``
+  since the correction method is the Storey's qvalue, the command returns
+  the estimated pi_0 versus the tuning parameter lambda:
+
+  .. image:: docs/images/pi0_None.png
+
+
+mictools strength $X $ODIR/pval_adj.txt $ODIR/strength.txt
 
 
 
