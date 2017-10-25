@@ -164,7 +164,19 @@ The command will return in the output directory the following:
     away_x	dino_x	0.050720
     ...
 
-    
+``pval.txt``
+  contains empirical p values for each variable pair::
+
+    Var1	Var2	None
+    away_x	bullseye_x	5.196545e-01
+    away_x	circle_x	9.550614e-01
+    away_x	dino_x	4.437794e-02
+    ...
+
+``pval_None.png``
+  the p values distribution plot:
+
+  .. image:: docs/images/pval_None.png
 
 
 
