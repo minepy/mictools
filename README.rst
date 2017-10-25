@@ -25,6 +25,7 @@ The MICtools pipeline can be broken into 4 steps (see the figure above):
    using the MIC_e estimator.
 
 **Table of contents**
+
 .. contents:: :local:
 
 Install
