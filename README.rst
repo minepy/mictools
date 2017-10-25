@@ -7,8 +7,9 @@ MICtools
 MICtools is an open source pipeline which combines the TIC_e and MIC_e measures
 [Reshef2016]_ into a two-step procedure that allows to identify relationships of
 various degrees of complexity in large datasets. TIC_e is used to perform 
-efficiently a high throughput screening of all the possible pairwise
-relationships assessing their significance, while MIC_e is used to rank 
+an efficient high throughput screening of all the possible pairwise
+relationships and a permutation based appraoch is used to assess their significance.  
+MIC_e is then used to rank 
 the subset of significant associations on the bases of their strength.
 
 .. image:: docs/images/schema.png
@@ -88,20 +89,22 @@ and complete the installation:
 Usage
 -----
 
-MICtools can handle different types of experiments:
+MICtools can be used to investigate variable associations in different types of experimental
+scenarios:
 
-* given a single dataset X, with M variables and N samples, MICtools evaluates
+* single dataset X, with M variables and N samples: to evaluate
   the M+(M-1)/2 possible associations;
-* given two datasets, X (MxN) and Y (KxN) (parameter -y/--yvars) MICtools 
-  evaluates all the pairwise relationships between the variables of the two
+* two datasets, X (MxN) and Y (KxN) (parameter -y/--yvars): to evaluate 
+  all the pairwise relationships between the variables of the two
   datasets (for a total of MxK associations). Note that the number samples (N)
   in the datasets X and Y must be the same.
-* given two datasets, X (MxN) and Y (KxN) it evaluates all the rowwise 
+* two datasets, X (MxN) and Y (KxN): to evaluate all the rowwise 
   relationships (see -r/--rowwise), i.e. only the variables pairs X_i and Y_i
   (for each i in min(M, K)) will be tested;
-* moreover, for each experiments listed above, if the sample classes are 
-  provided (see -l/--labels and -t/--target), the analysis will be performed 
-  within each class independently.
+
+In all the abovementioned cases the analysis will be performed 
+  within each class independently if the sample classes are 
+  provided (see -l/--labels and -t/--target),
 
 MICtools is implemented as a single command (``mictools'') with the following
 subcommands:
