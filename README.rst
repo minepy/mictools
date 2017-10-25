@@ -122,7 +122,7 @@ subcommands:
 Run ``mictools SUBCOMMAND --help`` for the documentation of each specific step.
 
 Tutorial
-^^^^^^^^
+--------
 We analyze the datasaurus dataset https://www.autodeskresearch.com/publications/samestats
 (DOI: 10.1145/3025453.3025912), composed by 13 relationships (for a total of 26
 variables) with the same summary statistics (e.g. the Pearson's correlation),
@@ -131,7 +131,7 @@ destroy secondary associations. In this example we test the entire set of possib
 associations (for a total of 26*(26-1)/2 = 325 relationships).
 
 Preparation 
-"""""""""""
+^^^^^^^^^^^
 Go to the ``examples`` folder:
 
 .. code-block:: sh
@@ -147,7 +147,7 @@ Select the Datasaurus dataset and the output folder:
   mkdir $ODIR
 
 Empirical TIC_e null distribution
-"""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Compute the empirical TIC_e null distribution (with 200,000 permutations,
 default value):
 
@@ -173,7 +173,7 @@ TIC_e range and ``NullCount`` and ``NullCountCum`` are distribution and the
 cumulative distribution, respectively.
 
 TIC_e p-values
-""""""""""""""
+^^^^^^^^^^^^^^
 Compute the TIC_e statistics and the associated empirical p-values for all 
 variable pairs:
 
@@ -208,7 +208,7 @@ The command will return in the output directory the following:
   .. image:: docs/images/pval_None.png
 
 Multiple testing correction
-"""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Correct the p-values for multiplicity in order to control the false discovery
 rate (FDR, default method);
 
@@ -229,7 +229,7 @@ The command returns in the OUTPUT directory the following files:
   .. image:: docs/images/pi0_None.png
 
 Strength of significant associations
-""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Finally, the strengths of the relationships called significant are estimated 
 using MIC_e. By default the significance level is set to 0.05:
 
