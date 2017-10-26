@@ -124,7 +124,7 @@ Run ``mictools SUBCOMMAND --help`` for the documentation of each specific step.
 Tutorial
 --------
 We analyze the "Datasaurus" synthetic dataset generated following the approach discussed at  https://www.autodeskresearch.com/publications/samestats
-(DOI: 10.1145/3025453.3025912). The dataset contains 26 variables linked by 13 relationships
+([Matejka2017]_). The dataset contains 26 variables linked by 13 relationships
 which have the same summary statistics (e.g. the Pearson's correlation),
 but are very different in appearance. The dataset was modified in order to 
 destroy secondary associations. In this example we test the entire set of possible 
@@ -260,3 +260,7 @@ None  x_shape_x  x_shape_y  4.723013e-04 -0.065583 -0.020535   0.566703
                 Pardis C. Sabeti and Michael Mitzenmacher. Measuring Dependence
                 Powerfully and Equitably. Journal of Machine Learning Research, 
                 2016.
+.. [Matejka2017] J. Matejka and G. Fitzmaurice. Same Stats, Different Graphs: 
+                 Generating Datasets with Varied Appearance and 
+                 Identical Statistics through Simulated Annealing. 
+                 ACM SIGCHI Conference on Human Factors in Computing Systems, 2017.
