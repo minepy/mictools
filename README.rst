@@ -7,9 +7,9 @@ MICtools
 MICtools is an open source pipeline which combines the TIC_e and MIC_e measures
 [Reshef2016]_ into a two-step procedure that allows to identify relationships of
 various degrees of complexity in large datasets. TIC_e is used to perform 
-efficiently a high throughput screening of all the possible pairwise
-relationships assessing their significance, while MIC_e is used to rank 
-the subset of significant associations on the bases of their strength.
+an efficient high throughput screening of all the possible pairwise
+relationships and a permutation based appraoch is used to assess their significance.  
+MIC_e is then used to rank the subset of significant associations on the bases of their strength.
 
 .. image:: docs/images/schema.png
 
@@ -88,20 +88,18 @@ and complete the installation:
 Usage
 -----
 
-MICtools can handle different types of experiments:
+MICtools can be used to investigate variable associations in different types of experimental scenarios:
 
-* given a single dataset X, with M variables and N samples, MICtools evaluates
+* single dataset X, with M variables and N samples: to evaluate
   the M+(M-1)/2 possible associations;
-* given two datasets, X (MxN) and Y (KxN) (parameter -y/--yvars) MICtools 
-  evaluates all the pairwise relationships between the variables of the two
+* two datasets, X (MxN) and Y (KxN) (parameter -y/--yvars): to evaluate 
+  all the pairwise relationships between the variables of the two
   datasets (for a total of MxK associations). Note that the number samples (N)
   in the datasets X and Y must be the same.
-* given two datasets, X (MxN) and Y (KxN) it evaluates all the rowwise 
+* two datasets, X (MxN) and Y (KxN): to evaluate all the rowwise 
   relationships (see -r/--rowwise), i.e. only the variables pairs X_i and Y_i
   (for each i in min(M, K)) will be tested;
-* moreover, for each experiments listed above, if the sample classes are 
-  provided (see -l/--labels and -t/--target), the analysis will be performed 
-  within each class independently.
+In all the abovementioned cases the analysis will be performed within each class independently if the sample classes are provided (see -l/--labels and -t/--target).
 
 MICtools is implemented as a single command (``mictools'') with the following
 subcommands:
@@ -125,10 +123,10 @@ Run ``mictools SUBCOMMAND --help`` for the documentation of each specific step.
 
 Tutorial
 --------
-We analyze the datasaurus dataset https://www.autodeskresearch.com/publications/samestats
-(DOI: 10.1145/3025453.3025912), composed by 13 relationships (for a total of 26
-variables) with the same summary statistics (e.g. the Pearson's correlation),
-while being very different in appearance. The dataset was modified in order to 
+We analyze the "Datasaurus" synthetic dataset generated following the approach discussed at  https://www.autodeskresearch.com/publications/samestats
+([Matejka2017]_). The dataset contains 26 variables linked by 13 relationships
+which have the same summary statistics (e.g. the Pearson's correlation),
+but are very different in appearance. The dataset was modified in order to 
 destroy secondary associations. In this example we test the entire set of possible 
 associations (for a total of 26*(26-1)/2 = 325 relationships).
 
@@ -262,3 +260,7 @@ None  x_shape_x  x_shape_y  4.723013e-04 -0.065583 -0.020535   0.566703
                 Pardis C. Sabeti and Michael Mitzenmacher. Measuring Dependence
                 Powerfully and Equitably. Journal of Machine Learning Research, 
                 2016.
+.. [Matejka2017] J. Matejka and G. Fitzmaurice. Same Stats, Different Graphs: 
+                 Generating Datasets with Varied Appearance and 
+                 Identical Statistics through Simulated Annealing. 
+                 ACM SIGCHI Conference on Human Factors in Computing Systems, 2017.
