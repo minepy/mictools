@@ -1,12 +1,21 @@
 from setuptools import setup, find_packages
 from mictools import __version__
 
+long_description = """MICtools is an open source pipeline which combines the
+TIC_e and MIC_e measures [Reshef2016]_ into a two-step procedure that allows to
+identify relationships of various degrees of complexity in large datasets. TIC_e
+is used to perform efficiently a high throughput screening of all the possible
+pairwise relationships assessing their significance, while MIC_e is used to rank 
+the subset of significant associations on the bases of their strength. Homepage:
+https://github.com/minepy/mictools.
+"""
+
 setup(
     name='mictools',
     version = __version__,
     packages = find_packages(),
     description='MICtools',
-    long_description=open('README.rst').read(),
+    long_description=long_description,
     url='https://github.com/minepy/mictools',
     download_url='https://github.com/minepy/mictools/releases',
     license='GPLv3',
