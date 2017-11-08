@@ -11,9 +11,10 @@ an efficient high throughput screening of all the possible pairwise
 relationships and a permutation based appraoch is used to assess their significance.  
 MIC_e is then used to rank the subset of significant associations on the bases of their strength.
 
-**Paper** ``A practical tool for Maximal Information Coefficient analysis``.
+**Paper**: *A practical tool for Maximal Information Coefficient analysis*.
 Davide Albanese, Samantha Riccadonna, Claudio Donati and Pietro Franceschi
-bioRxiv 215855; doi: https://doi.org/10.1101/215855.
+bioRxiv 215855; doi: 10.1101/215855;
+https://www.biorxiv.org/content/early/2017/11/07/215855
 
 .. image:: docs/images/schema.png
 
