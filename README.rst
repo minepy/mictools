@@ -11,6 +11,10 @@ an efficient high throughput screening of all the possible pairwise
 relationships and a permutation based appraoch is used to assess their significance.  
 MIC_e is then used to rank the subset of significant associations on the bases of their strength.
 
+**Paper** ``A practical tool for Maximal Information Coefficient analysis``.
+Davide Albanese, Samantha Riccadonna, Claudio Donati and Pietro Franceschi
+bioRxiv 215855; doi: https://doi.org/10.1101/215855.
+
 .. image:: docs/images/schema.png
 
 The MICtools pipeline can be broken into 4 steps (see the figure above):
