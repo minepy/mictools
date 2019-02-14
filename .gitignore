@@ -5,3 +5,4 @@ build/
 dist/
 MANIFEST
 mictools.egg-info
+.vscode
