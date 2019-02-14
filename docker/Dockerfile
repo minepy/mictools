@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     python-matplotlib \
     python-pandas \
     git \
-  && pip install --upgrade pip \
   && pip install 'setuptools >=14.0' \
   && git clone https://github.com/minepy/mictools.git /tmp/mictools/ \
   && pip install /tmp/mictools/ \
