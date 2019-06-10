@@ -8,6 +8,8 @@ relationships assessing their significance, while MIC_e is used to rank
 the subset of significant associations on the bases of their strength.
 Homepage: https://github.com/minepy/mictools.
 
+This image includes Python 3 and minepy.
+
 ## Quickstart
 
 1. Download the latest version:
