@@ -28,7 +28,7 @@ setup(
         'numpy>=1.7.0',
         'scipy>=0.13',
         'pandas>=0.17.0',
-        'matplotlib>=1.2.0,<2',
+        'matplotlib>=1.2.0',
         'statsmodels>=0.6.1',
         'minepy>=1.2'],
     entry_points='''
