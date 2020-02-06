@@ -16,8 +16,6 @@
 ##    along with MICtools. If not, see <http://www.gnu.org/licenses/>.
 
 
-from __future__ import division
-
 import os
 import os.path
 import sys

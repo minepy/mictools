@@ -41,14 +41,14 @@ Install
 Using pip (Linux and macOS/OS X)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We suggest to install the Python and the GCC compiler through the package manager 
+We suggest to install Python 3 (3.5+) and the GCC compiler through the package manager 
 (In Mac OS X, we recommend to install them using `Homebrew <http://brew.sh/>`_)
 (e.g. on Ubuntu/Debian):
 
 .. code-block:: sh
 
     sudo apt-get update
-    sudo apt-get install build-essential python-dev
+    sudo apt-get install build-essential python3-dev
 
 Then, upgrade pip and install setuptools:
 
@@ -79,7 +79,7 @@ From source
 ^^^^^^^^^^^
 
 If you are installing from source, the following dependences must be installed:
-Python >= 2.7, Click >= 5.1, numpy >= 1.7.0, scipy >= 0.13, pandas >= 0.17.0,
+Python >= 3.5, Click >= 5.1, numpy >= 1.7.0, scipy >= 0.13, pandas >= 0.17.0,
 matplotlib >= 1.2.0,<2, statsmodels >= 0.6.1, minepy >= 1.2. We suggest to
 install these dependences using the OS package manager (Linux), Homebrew 
 (macOS/OS X) or pip.
@@ -90,7 +90,7 @@ and complete the installation:
 .. code-block:: sh
 
    tar -zxvf mictools-X.Y.Z.tar.gz
-   python setup.py install
+   python3 setup.py install
 
 Usage
 -----

@@ -35,6 +35,5 @@ setup(
             [console_scripts]
             mictools=scripts.mictools_cmd:cli
         ''',
-    use_2to3 = True,
     include_package_data = True
 )
