@@ -37,12 +37,12 @@ def compute_null_oneclass(X, Y=None, rowwise=False, B=9, c=5, nperm=250000, seed
     rs = np.random.RandomState(seed)
     mine = minepy.MINE(alpha=B, c=c, est="mic_e")
 
-    Xa = X.as_matrix()
+    Xa = X.values
     if Y is None:
         idx = np.arange(Xa.shape[0])
         Ya, max_idx_rowwise = None, None
     else:
-        Ya = Y.as_matrix()
+        Ya = Y.values
         if rowwise:
             max_idx_rowwise = min(Xa.shape[0], Ya.shape[0])
             idx = None

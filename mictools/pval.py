@@ -43,13 +43,13 @@ def compute_pval_oneclass(X, null_dist, Y=None, single=False, B=9, c=5):
 
     # observed values/distribution
     names=['Var1', 'Var2']
-    Xa = X.as_matrix()
+    Xa = X.values
     if Y is None:
         _, tic = minepy.pstats(Xa, alpha=B, c=c, est="mic_e")
         index = pd.MultiIndex.from_tuples(
             list(itertools.combinations(X.index, 2)), names=names)
     else:
-        Ya = Y.as_matrix()
+        Ya = Y.values
         if single:
             _, tic = mictools.utils.sstats(Xa, Ya, alpha=B, c=c, est="mic_e")
             index = pd.MultiIndex.from_arrays([X.index, Y.index], names=names)
