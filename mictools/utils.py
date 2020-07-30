@@ -79,7 +79,8 @@ def read_data(xvars_fn, labels_fn=None, target=None, yvars_fn=None):
             raise Exception("target {} is not in the labels file".\
                             format(target))
         
-        labels = labels_df.loc[labels_df[target].notnull(), target]
+        labels_df = labels_df.loc[labels_df[target].notnull(), target]
+        labels = labels_df.astype(str)
         sample_ids = sorted(set(sample_ids) & set(labels.index))
 
     if not yvars_fn is None:
