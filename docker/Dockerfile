@@ -1,4 +1,4 @@
-FROM debian:9
+FROM debian:10.2
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
