@@ -139,7 +139,8 @@ def pval_cmd(xvars_fn, null_fn, output_dir, labels_fn=None, target=None,
 
     X, labels, Y = mictools.utils.read_data(xvars_fn, labels_fn, target,
                                             yvars_fn)    
-    null_dist = pd.read_csv(null_fn, sep='\t', index_col=[0, 1, 2])
+    null_dist = pd.read_csv(null_fn, sep='\t', dtype={'Class': str})
+    null_dist.set_index(['Class', 'BinStart', 'BinEnd'], inplace=True)
 
     obs_dist, obs, pval = compute_pval(X=X,
                                        null_dist=null_dist,
