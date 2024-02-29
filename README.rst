@@ -11,7 +11,7 @@ MICtools is an open source pipeline which combines the TIC_e and MIC_e measures
 [Reshef2016]_ into a two-step procedure that allows to identify relationships of
 various degrees of complexity in large datasets. TIC_e is used to perform 
 an efficient high throughput screening of all the possible pairwise
-relationships and a permutation based appraoch is used to assess their significance.  
+relationships and a permutation based approach is used to assess their significance.  
 MIC_e is then used to rank the subset of significant associations on the bases of their strength.
 
 **Please cite**: Davide Albanese, Samantha Riccadonna, Claudio Donati, Pietro
